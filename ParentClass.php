@@ -7,27 +7,27 @@
     private $day;
 
     public function __construct($month, $day) {
-      $this->$month = $month;
-      $this->$day = $day;
+      $this->month = $month;
+      $this->day = $day;
     }
 
     public function getMonth() {
-      return $this->$month;
+      return $this->month;
     }
 
     public function getDay() {
-      return $this->$day;
+      return $this->day;
     }
 
     public function setMonth($month) {
-      $this->$month = $month;
+      $this->month = $month;
     }
 
     public function setDate($day) {
-      $this->$day = $day;
+      $this->day = $day;
     }
 
     public function __toString() {
-      return "Today's date is " . getMonth() . " " . getDay();
+      return "The date is " . $this->getMonth() . " " . $this->getDay() . ". ";
     }
 	}

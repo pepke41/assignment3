@@ -7,20 +7,20 @@
 
     public function __construct($month, $day, $nameOfHoliday) {
       parent::__construct($month, $day);
-      $this->$nameOfHoliday = $nameOfHoliday;
+      $this->nameOfHoliday = $nameOfHoliday;
     }
 
     public function getName() {
-      return $this->$nameOfHoliday;
+      return $this->nameOfHoliday;
     }
 
     public function setName($nameOfHoliday) {
-      $this->$nameOfHoliday = $nameOfHoliday;
+      $this->nameOfHoliday = $nameOfHoliday;
     }
 
     public function __toString() {
+			$child = "The next holiday is " . $this->getName() . ". ";
       $parent = parent::__toString();
-      $child = "Wowee! Today is also " . $this->getName();
-      return $parent . $child;
+      return $child . $parent;
     }
 	}
